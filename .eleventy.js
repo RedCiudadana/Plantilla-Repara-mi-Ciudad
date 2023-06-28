@@ -6,7 +6,7 @@ const rmj = require('render-markdown-js')
 module.exports = function (eleventyConfig) {
     let md = new MarkdownIt();
 
-    eleventyConfig.setTemplateFormats("njk,html,md");
+    eleventyConfig.setTemplateFormats("njk,md");
     
     eleventyConfig.addPassthroughCopy('src');
     eleventyConfig.addPassthroughCopy('css');

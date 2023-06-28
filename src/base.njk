@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-ES">
+<head>
+
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+
+<body class="stretched search-overlay">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+
+		
+		{% block content %}
+
+        {% endblock %} 
+
+		<!-- Footer
+		============================================= -->
+
+    </div>
+    {% block body_javascripts %}
+
+    {% endblock %}
+
+	</body>
+</html>
