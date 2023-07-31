@@ -1,77 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
+---
+permalink: "mapa/index.html"
+---
 
-<!-- Basic Page Needs
-================================================== -->
-<title>Arregla Mi Ciudad Mapa | Red Ciudadana</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{% extends "src/base.njk" %}
 
-<!-- CSS
-================================================== -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/colors/blue.css">
+{% block head %}
+<title>Arregla Mi Municipio Mapa | Red Ciudadana</title>
 
-</head>
-<body>
+{% endblock %}
 
-<!-- Wrapper -->
-<div id="wrapper">
-
-<!-- Header Container
-================================================== -->
-<header id="header-container" class="fullwidth">
-
-	<!-- Header -->
-	<div id="header">
-		<div class="container">
-			
-			<!-- Left Side Content -->
-			<div class="left-side">
-				
-				<!-- Logo -->
-				<div id="logo">
-					<a href="index.html"><img src="/images/logo.png" alt=""></a>
-				</div>
-
-				<!-- Main Navigation -->
-				<!-- Main Navigation -->
-				<nav id="navigation">
-					<ul id="responsive">
-
-						<li><a href="/index.html" class="current">Inicio</a>
-						</li>
-
-						<li><a href="/reportes/index.html">Reportes</a>
-						</li>
-
-						<li><a href="/mapa/index.html">Mapa</a>
-						</li>
-
-						<li><a href="/dashboard/index.html">Dashboard</a>
-						</li>
-
-						<li><a href="/reporta/index.html" class="button ripple-effect btn">Reporta<i class="icon-material-baseline-mail-outline"></i></a>
-						</li>
-
-
-					</ul>
-				</nav>
-				<div class="clearfix"></div>
-				<!-- Main Navigation / End -->
-				
-			</div>
-			<!-- Left Side Content / End -->
-
-		</div>
-	</div>
-	<!-- Header / End -->
-
-</header>
-
-<div class="clearfix"></div>
-<!-- Header Container / End -->
+{% block content %}
 
 <!-- Page Content
 ================================================== -->
@@ -178,7 +116,7 @@
 						</div>
 						<div class="tag">
 							<input type="checkbox" id="tag4"/>
-							<label for="tag4">vue /js</label>
+							<label for="tag4">vue js</label>
 						</div>
 						<div class="tag">
 							<input type="checkbox" id="tag5"/>
@@ -563,51 +501,24 @@
 </div>
 <!-- Wrapper / End -->
 
-<!-- Scripts
-================================================== -->
-<script src="/js/jquery-3.6.0.min./js"></script>
-<script src="/js/jquery-migrate-3.3.2.min./js"></script>
-<script src="/js/mmenu.min./js"></script>
-<script src="/js/tippy.all.min./js"></script>
-<script src="/js/simplebar.min./js"></script>
-<script src="/js/bootstrap-slider.min./js"></script>
-<script src="/js/bootstrap-select.min./js"></script>
-<script src="/js/snackbar./js"></script>
-<script src="/js/clipboard.min./js"></script>
-<script src="/js/counterup.min./js"></script>
-<script src="/js/magnific-popup.min./js"></script>
-<script src="/js/slick.min./js"></script>
-<script src="/js/custom./js"></script>
+{% endblock %}
 
-<!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
-<script>
-// Snackbar for user status switcher
-$('#snackbar-user-status label').click(function() { 
-	Snackbar.show({
-		text: 'Your status has been changed!',
-		pos: 'bottom-center',
-		showAction: false,
-		actionText: "Dismiss",
-		duration: 3000,
-		textColor: '#fff',
-		backgroundColor: '#383838'
-	}); 
-}); 
-</script>
+{% block footer %}
+{% endblock%}
 
+{% block body_javascripts %}
 
-<!-- Leaflet // Docs: https://leaflet/js.com/ -->
-<script src="/js/leaflet.min./js"></script>
+<!-- Leaflet // Docs: https://leafletjs.com/ -->
+<script src="/js/leaflet.min.js"></script>
 
-<!-- Leaflet Maps Scripts (locations are stored in leaflet-hireo./js) -->
-<script src="/js/leaflet-markercluster.min./js"></script>
-<script src="/js/leaflet-gesture-handling.min./js"></script>
-<script src="/js/leaflet-hireo./js"></script>
+<!-- Leaflet Maps Scripts (locations are stored in leaflet-hireo.js) -->
+<script src="/js/leaflet-markercluster.min.js"></script>
+<script src="/js/leaflet-gesture-handling.min.js"></script>
+<script src="/js/leaflet-hireo.js"></script>
 
 <!-- Leaflet Geocoder + Search Autocomplete // Docs: https://github.com/perliedman/leaflet-control-geocoder -->
-<script src="/js/leaflet-autocomplete./js"></script>
-<script src="/js/leaflet-control-geocoder./js"></script>
+<script src="/js/leaflet-autocomplete.js"></script>
+<script src="/js/leaflet-control-geocoder.js"></script>
 
 
-</body>
-</html>
+{% endblock %}
