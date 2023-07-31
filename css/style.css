@@ -258,7 +258,7 @@ button {
 	width: auto;
 	overflow: visible;
 	background: transparent;
-	color: inherit;
+	color: #fff!important;
 	font: inherit;
 	line-height: normal;
 	cursor: pointer;
@@ -17005,3 +17005,7 @@ ul.dashboard-box-list > li:hover {
 	.padding-left-90 { padding-left: 90px !important; }
 	.padding-left-95 { padding-left: 95px !important; }
 	.padding-left-100 { padding-left: 100px !important; }
+
+	.btn{
+		color: #fff!important;
+	}
