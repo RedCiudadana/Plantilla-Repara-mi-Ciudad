@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('fonts');
     eleventyConfig.addPassthroughCopy('images');
 
+    eleventyConfig.addDataExtension('json', (contents) => {
+        return JSON.parse(contents);
+    });
+
     eleventyConfig.addNunjucksFilter("mdIt", function(content) {
         return md.render(content);
     });

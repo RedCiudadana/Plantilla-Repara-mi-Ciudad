@@ -59,103 +59,106 @@ permalink: "reporta/index.html"
 						</div>
 
 						<div class="content with-padding padding-bottom-10">
-							<div class="row">
+							
+							<form id="form" width="100%" target="_self" onsubmit="return postToForm();" action="" autocomplete="off">
+								<div class="row">
+									<div class="col-xl-6">
+										<div class="submit-field">
+											<h5>Categoría</h5>
+											<select id="category" name="entry.498725489" required class="selectpicker with-border" data-size="7" title="Select Job Type">
+												<option>Full Time</option>
+												<option>Freelance</option>
+												<option>Part Time</option>
+												<option>Internship</option>
+												<option>Temporary</option>
+											</select>
+										</div>
+									</div>
 
-								<div class="col-xl-6">
-									<div class="submit-field">
-										<h5>Categoría</h5>
-										<select class="selectpicker with-border" data-size="7" title="Select Job Type">
-											<option>Full Time</option>
-											<option>Freelance</option>
-											<option>Part Time</option>
-											<option>Internship</option>
-											<option>Temporary</option>
-										</select>
+									<div class="col-xl-6">
+										<div class="submit-field">
+											<h5>Sub Categoría</h5>
+											<select id="subcategory" name="entry.481737689" required class="selectpicker with-border" data-size="7" title="Select Category">
+												<option>Accounting and Finance</option>
+												<option>Clerical & Data Entry</option>
+												<option>Counseling</option>
+												<option>Court Administration</option>
+												<option>Human Resources</option>
+												<option>Investigative</option>
+												<option>IT and Computers</option>
+												<option>Law Enforcement</option>
+												<option>Management</option>
+												<option>Miscellaneous</option>
+												<option>Public Relations</option>
+											</select>
+										</div>
+									</div>
+
+									
+
+									<div class="col-xl-12">
+										<div class="submit-field">
+											<h5>Título del Reporte</h5>
+											<input id="title" name="entry.1794477957" required type="text" class="with-border">
+										</div>
+									</div>
+
+									<div class="col-xl-12">
+										<div class="submit-field">
+											<h5>Descripción del Reporte</h5>
+											<textarea id="description" name="entry.1606735796" required cols="30" rows="5" class="with-border"></textarea>
+										</div>
+									</div>
+
+									<div class="col-xl-12">
+										<div class="submit-field">
+											<h5>Ubicación</h5>
+											<div id="markerInfo">Haz clic en el mapa para seleccionar una ubicación</div>
+											<div id="map-container">
+												<div id="map"></div>
+												<div id="addressInputContainer">
+													<input type="text" id="addressInput" placeholder="Ingrese una dirección">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xl-6">
+													<div class="submit-field">
+														<div>Latitud: <input id="latitude" name="entry.1615723381" type="text"></div>
+													</div>
+												</div>
+
+												<div class="col-xl-6">
+													<div class="submit-field">
+														<div>Longitud: <input id="longitude" name="entry.1203873627" type="text"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+					
+									<div class="col-xl-6">
+										<div class="submit-field">
+											<h5>Nombre (Opcional)</h5>
+											<input id="name" name="entry.467289130" type="text" class="with-border">
+										</div>
+									</div>
+
+									<div class="col-xl-6">
+										<div class="submit-field">
+											<h5>Correo (Opcional)</h5>
+											<input id="email" name="entry.56038912" type="text" class="with-border">
+										</div>
+									</div>
+
+									<div class="col-xl-12" style="margin-bottom:25px">
+										<button id="send" type="submit" class="button ripple-effect big margin-top-30 btn"><i class="icon-feather-plus"></i>Envíanos tu Reportes</button>
 									</div>
 								</div>
+							</form>
 
-								<div class="col-xl-6">
-									<div class="submit-field">
-										<h5>Sub Categoría</h5>
-										<select class="selectpicker with-border" data-size="7" title="Select Category">
-											<option>Accounting and Finance</option>
-											<option>Clerical & Data Entry</option>
-											<option>Counseling</option>
-											<option>Court Administration</option>
-											<option>Human Resources</option>
-											<option>Investigative</option>
-											<option>IT and Computers</option>
-											<option>Law Enforcement</option>
-											<option>Management</option>
-											<option>Miscellaneous</option>
-											<option>Public Relations</option>
-										</select>
-									</div>
-								</div>
-
-								
-
-								<div class="col-xl-12">
-									<div class="submit-field">
-										<h5>Título del Reporte</h5>
-										<input type="text" class="with-border">
-									</div>
-								</div>
-
-								<div class="col-xl-12">
-									<div class="submit-field">
-										<h5>Descripción del Reporte</h5>
-										<textarea cols="30" rows="5" class="with-border"></textarea>
-									</div>
-								</div>
-
-                                <div class="col-xl-12">
-									<div class="submit-field">
-                                        <h5>Ubicación</h5>
-                                        <div id="markerInfo">Haz clic en el mapa para seleccionar una ubicación</div>
-										<div id="map-container">
-                                            <div id="map"></div>
-                                            <div id="addressInputContainer">
-                                                <input type="text" id="addressInput" placeholder="Ingrese una dirección">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="submit-field">
-                                                    <div>Latitud: <span id="latitude"></span></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-xl-6">
-                                                <div class="submit-field">
-                                                    <div>Longitud: <span id="longitude"></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-									</div>
-								</div>
-                
-                                <div class="col-xl-6">
-									<div class="submit-field">
-										<h5>Nombre (Opcional)</h5>
-										<input type="text" class="with-border">
-									</div>
-								</div>
-
-                                <div class="col-xl-6">
-									<div class="submit-field">
-										<h5>Correo (Opcional)</h5>
-										<input type="text" class="with-border">
-									</div>
-								</div>
-
-							</div>
+							<h3 id="success-msg" style="display:none;margin-bottom:25px"> Su reporte ha sido enviado</h3>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-xl-12">
-					<a href="#" class="button ripple-effect big margin-top-30"><i class="icon-feather-plus"></i> Post a Job</a>
 				</div>
 
 			</div>
@@ -209,88 +212,101 @@ permalink: "reporta/index.html"
 {% endblock %}
 
 {% block body_javascripts %}
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
-  // Función para inicializar el mapa
-  function initMap() {
+function initMap() {
     var map = L.map('map', {
-      zoomControl: false // Desactivar los controles de zoom
+        zoomControl: false // Desactivar los controles de zoom
     }).setView([14.634915, -90.506882], 14); // Coordenadas iniciales centradas en Ciudad de Guatemala con zoom 14
-
 
     // Agregar el mapa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     var marker;
-    var overlay;
 
-    // Manejar clics en el mapa para obtener las coordenadas y agregar un marcador
+    function updateMapLocation(lat, lng) {
+        // Remove the existing marker from the map (if any)
+        if (marker) {
+            map.removeLayer(marker);
+        }
+
+        // Create a new marker at the given latitude and longitude
+        marker = L.marker([lat, lng]).addTo(map);
+
+        // Center the map at the new marker's position
+        map.setView([lat, lng], 14);
+    }
+
+    // Handle clicks on the map to update latitude and longitude inputs
     map.on('click', function(e) {
-      var latLng = e.latlng;
-      var lat = latLng.lat.toFixed(6);
-      var lng = latLng.lng.toFixed(6);
+        var latLng = e.latlng;
+        var lat = latLng.lat.toFixed(6);
+        var lng = latLng.lng.toFixed(6);
 
-      // Si ya hay un marcador, lo removemos del mapa
-      if (marker) {
-        map.removeLayer(marker);
-      }
+        // Update the latitude and longitude inputs
+        document.getElementById('latitude').value = lat;
+        document.getElementById('longitude').value = lng;
 
-      // Creamos un nuevo marcador en la posición del clic
-      marker = L.marker(latLng).addTo(map);
-
-      // Actualizamos las coordenadas en los elementos <span>
-      document.getElementById('latitude').innerText = lat;
-      document.getElementById('longitude').innerText = lng;
+        // Update the map location
+        updateMapLocation(lat, lng);
     });
 
-    // Manejar cambios en el campo de entrada de dirección
+    // Handle changes to the latitude and longitude inputs
+    document.getElementById('latitude').addEventListener('change', function () {
+        var lat = parseFloat(this.value);
+        var lng = parseFloat(document.getElementById('longitude').value);
+        if (!isNaN(lat) && !isNaN(lng)) {
+            updateMapLocation(lat, lng);
+        }
+    });
+
+    document.getElementById('longitude').addEventListener('change', function () {
+        var lat = parseFloat(document.getElementById('latitude').value);
+        var lng = parseFloat(this.value);
+        if (!isNaN(lat) && !isNaN(lng)) {
+            updateMapLocation(lat, lng);
+        }
+    });
+
+    // Handle changes to the address input for geocoding
     document.getElementById('addressInput').addEventListener('change', function() {
-      var address = this.value;
-      if (!address) return; // Si el campo de dirección está vacío, no hacemos nada
+        var address = this.value;
+        if (!address) return; // If the address field is empty, do nothing
 
-      // Realizar una solicitud de geocodificación a Nominatim
-      var nominatimUrl = 'https://nominatim.openstreetmap.org/search';
-      var params = {
-        q: address,
-        format: 'json',
-        limit: 1
-      };
+        // Perform a geocoding request to Nominatim
+        var nominatimUrl = 'https://nominatim.openstreetmap.org/search';
+        var params = {
+            q: address,
+            format: 'json',
+            limit: 1
+        };
 
-      axios.get(nominatimUrl, { params })
-        .then(function(response) {
-          var data = response.data;
-          if (data.length > 0) {
-            var lat = data[0].lat;
-            var lng = data[0].lon;
+        axios.get(nominatimUrl, { params })
+            .then(function(response) {
+                var data = response.data;
+                if (data.length > 0) {
+                    var lat = parseFloat(data[0].lat);
+                    var lng = parseFloat(data[0].lon);
 
-            // Si ya hay un overlay, lo removemos del mapa
-            if (overlay) {
-              map.removeLayer(overlay);
-            }
+                    // Update the latitude and longitude inputs
+                    document.getElementById('latitude').value = lat;
+                    document.getElementById('longitude').value = lng;
 
-            // Creamos un nuevo overlay en la posición de la dirección
-            overlay = L.marker([lat, lng]).addTo(map);
-
-            // Centramos el mapa en la ubicación del overlay
-            map.setView([lat, lng], 14);
-
-            // Actualizamos las coordenadas en los elementos <span>
-            document.getElementById('latitude').innerText = lat;
-            document.getElementById('longitude').innerText = lng;
-          } else {
-            alert('Dirección no encontrada');
-          }
-        })
-        .catch(function(error) {
-          console.error('Error al geocodificar la dirección:', error);
-        });
+                    // Update the map location
+                    updateMapLocation(lat, lng);
+                } else {
+                    alert('Dirección no encontrada');
+                }
+            })
+            .catch(function(error) {
+                console.error('Error al geocodificar la dirección:', error);
+            });
     });
-  }
+}
 
-  // Llamada a la función para inicializar el mapa cuando se cargue la página
-  document.addEventListener('DOMContentLoaded', initMap);
+// Llamada a la función para inicializar el mapa cuando se cargue la página
+document.addEventListener('DOMContentLoaded', initMap);
 </script>
-
-
 
 <!-- Google Autocomplete -->
 <script>
@@ -308,6 +324,38 @@ permalink: "reporta/index.html"
 		        $(".pac-container").prependTo("#autocomplete-container");
 		    }, 300);
 		}
+	}
+</script>
+
+<script>
+	function postToForm() {
+		var field1 = $("#category option:selected").text();
+		var field2 = $("#subcategory option:selected").text();
+		var field3 = $("#title").val();
+		var field4 = $("#description").val();
+		var field5 = $("#latitude").val();
+		var field6 = $("#longitude").val();
+		var field7 = $("#name").val();
+		var field8 = $("#email").val();
+
+
+		$.ajax({
+			url: "https://docs.google.com/forms/d/e/1FAIpQLSeGpleiCfrBwWQO3gAFz7_u4uVvrDK4KgBw8KjQ_7Aahaj1uQ/formResponse?",
+			data: {"entry.498725489": field1, "entry.481737689": field2, "entry.1794477957": field3, "entry.1606735796": field4, "entry.1615723381": field5, "entry.1203873627": field6, "entry.467289130": field7, "entry.56038912": field8},
+			type: "POST",
+			dataType: "xml",
+			success: function(d)
+			{
+			},
+			error: function(x, y, z)
+				{
+
+					$('#success-msg').show();
+					$('#form').hide();
+					
+				}
+		});
+		return false;
 	}
 </script>
 
