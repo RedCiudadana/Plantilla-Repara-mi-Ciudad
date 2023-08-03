@@ -1,0 +1,54 @@
+[
+    {
+     "marca_temporal": "8\/3\/2023 11:16:11",
+     "categoria": "Categoría 1",
+     "subcategoria": "Subcategoría 1",
+     "titulo": "Reporte 1",
+     "descripcion": "Esta es la descripción del reporte 1, donde el contenido es de prueba únicamente.",
+     "latitud": 14.635942,
+     "longitud": -90.509671,
+     "nombre": "Nombre 1",
+     "correo": "Correo1"
+    },
+    {
+     "marca_temporal": "8\/3\/2023 11:16:36",
+     "categoria": "Categoría 2",
+     "subcategoria": "Subcategoría 2",
+     "titulo": "Reporte 2",
+     "descripcion": "Esta es la descripción del reporte 2, donde el contenido es de prueba únicamente.",
+     "latitud": 14.638018,
+     "longitud": -90.539879
+    },
+    {
+     "marca_temporal": "8\/3\/2023 11:17:12",
+     "categoria": "Categoría 3",
+     "subcategoria": "Subcategoría 3",
+     "titulo": "Reporte 3",
+     "descripcion": "Esta es la descripción del reporte 3, donde el contenido es de prueba únicamente.",
+     "latitud": 14.623352,
+     "longitud": -90.436556,
+     "nombre": "Nombre 3",
+     "correo": "Correo 3"
+    },
+    {
+     "marca_temporal": "8\/3\/2023 11:17:37",
+     "categoria": "Categoría 4",
+     "subcategoria": "Subcategoría 4",
+     "titulo": "Reporte 4",
+     "descripcion": "Esta es la descripción del reporte 4, donde el contenido es de prueba únicamente.",
+     "latitud": 14.620661,
+     "longitud": -90.511387,
+     "nombre": "Nombre 4"
+    },
+    {
+     "marca_temporal": "8\/3\/2023 11:18:12",
+     "categoria": "Categoría 5",
+     "subcategoria": "Subcategoría 10",
+     "titulo": "Reporte 5",
+     "descripcion": "Esta es la descripción del reporte 5, donde el contenido es de prueba únicamente.",
+     "latitud": 14.649312,
+     "longitud": -90.513104,
+     "nombre": "Nombre 5",
+     "correo": "correo5@gmail.com"
+    }
+]
