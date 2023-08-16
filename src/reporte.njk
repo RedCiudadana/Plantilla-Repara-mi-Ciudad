@@ -8,3 +8,114 @@ permalink: "reporte/{{reportes.categoria | slug}}/{{reportes.subcategoria | slug
 tags:
   - reportes
 ---
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>Arregla Mi Municipio | Red Ciudadana</title>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Titlebar
+================================================== -->
+<div class="single-page-header" data-background-image="images/single-job.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="single-page-header-inner">
+					<div class="left-side">
+						<div class="header-image"><a href="#"><img src="/images/company-logo-03a.png" alt=""></a></div>
+						<div class="header-details">
+							<h3>{{reportes.titulo}}</h3>
+							<h5>subtitulo</h5>
+							<ul>
+								<li>{{reportes.categoria}}</li>
+                <li>{{reportes.subcategoria}}</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right-side">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Page Content
+================================================== -->
+<div class="container">
+	<div class="row">
+		
+		<!-- Content -->
+		<div class="col-xl-12 col-lg-12 content-right-offset">
+
+			<div class="single-page-section">
+				<h3 class="margin-bottom-25">Descripción</h3>
+				<p>{{reportes.descripcion}}</p>
+			</div>
+
+			<div class="single-page-section">
+				<h3 class="margin-bottom-30">Location</h3>
+				<div id="single-job-map-container">
+					<div id="singleListingMap" data-latitude="{{reportes.latitud}}" data-longitude="{{reportes.longitud}}" data-map-icon="im im-icon-Hamburger"></div>
+					<a href="#" id="streetView">Street View</a>
+				</div>
+			</div>
+
+			<div class="single-page-section">
+				<h3 class="margin-bottom-25">Otros Reportes</h3>
+
+				<!-- Listings Container -->
+				<div class="listings-container grid-layout">
+            {% for reporte in collections.reportes | limit(2) | reverse%}
+						<!-- Job Listing -->
+						<a href="{{reporte.url}}" class="job-listing">
+
+							<!-- Job Listing Details -->
+							<div class="job-listing-details">
+								<!-- Logo -->
+								<div class="job-listing-company-logo">
+									<img src="/images/company-logo-02.png" alt="">
+								</div>
+
+								<!-- Details -->
+								<div class="job-listing-description">
+									<h4 class="job-listing-company">{{reporte.data.reportes.titulo}}</h4>
+									<h3 class="job-listing-title">{{reporte.data.reportes.descripcion}}</h3>
+								</div>
+							</div>
+
+							<!-- Job Listing Footer -->
+							<div class="job-listing-footer">
+								<ul>
+									<li> {{reporte.data.reportes.categoria}}</li>
+                  <li> {{reporte.data.reportes.subcategoria}}</li>
+								</ul>
+							</div>
+						</a>
+            {% endfor %}
+						
+					<!-- Listings Container / End -->
+          </div>
+
+				</div>
+		</div>
+
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block body_javascripts %}
+<!-- Geting an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+<script src="/js/infobox.min.js"></script>
+<script src="/js/markerclusterer.js"></script>
+<script src="/js/maps.js"></script>
+{% endblock %}
